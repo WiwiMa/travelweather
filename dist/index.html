@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Travel App</title>
+    <link href="main.css" rel="stylesheet"></head>
+    <body>
+        <header>
+            <h1>
+                TravelWeather
+            </h1>
+        </header>
+        <main>
+            <section id="input_section">
+                <form id="travel_form">
+                    <div>Where are you travelling to?</div>
+                    <input id="input_location" type="text" name="input_location" placeholder=""><br />
+                    <div>What day are you travelling?</div>
+                    <input id="input_date" type="date" name="input_date"><br />
+                    <div id="submit_button"><button id="submit">Submit</button></div>
+                </form>
+            </section>
+            <section id="output_section" style="display: none;">
+                <h2 id="output_title">Your journey to Hawaii</h2>
+                <div id="output_date">The weather on 26-02-2018:</div>
+                <div id="output_forecast">Sunny but rainy</div>
+                <div class="location_image"><img src="https://cdn.pixabay.com/photo/2020/01/20/22/55/bush-4781627_1280.jpg" id="output_img"></div>
+                <div id="save_option">
+                    <button id="remove">Remove</button>
+                    <button id="save">Save</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            This is not a footer.
+        </footer>
+        <script>
+            if('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                })
+            }
+        </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
